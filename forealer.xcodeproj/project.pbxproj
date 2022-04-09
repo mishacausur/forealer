@@ -22,6 +22,7 @@
 		B6370A8C2802153F0061B728 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8B2802153F0061B728 /* ModelManager.swift */; };
 		B6370A8E280215C40061B728 /* Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8D280215C40061B728 /* Mappers.swift */; };
 		B6370A9028021AF90061B728 /* ModernMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8F28021AF90061B728 /* ModernMappers.swift */; };
+		B6370A9328021E540061B728 /* ADataBaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B6370A8B2802153F0061B728 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		B6370A8D280215C40061B728 /* Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappers.swift; sourceTree = "<group>"; };
 		B6370A8F28021AF90061B728 /* ModernMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernMappers.swift; sourceTree = "<group>"; };
+		B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADataBaseManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		B6370A632802026A0061B728 /* forealer */ = {
 			isa = PBXGroup;
 			children = (
+				B6370A9128021E2C0061B728 /* AManagers */,
 				B6370A7E280204690061B728 /* Managers */,
 				B6370A7D280204610061B728 /* Flows */,
 				B6370A642802026A0061B728 /* AppDelegate.swift */,
@@ -122,6 +125,14 @@
 				B6370A88280205F90061B728 /* DataBaseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B6370A9128021E2C0061B728 /* AManagers */ = {
+			isa = PBXGroup;
+			children = (
+				B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */,
+			);
+			path = AManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6370A9328021E540061B728 /* ADataBaseManagerProtocol.swift in Sources */,
 				B6370A8E280215C40061B728 /* Mappers.swift in Sources */,
 				B6370A80280204780061B728 /* DataBaseManager.swift in Sources */,
 				B6370A87280205E60061B728 /* UserModel.swift in Sources */,

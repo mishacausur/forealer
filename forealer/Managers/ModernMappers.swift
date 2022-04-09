@@ -8,7 +8,7 @@
 import RealmSwift
 
 typealias DataBaseModelMapper<DataBaseEntity: Object, Entity> = (Entity) -> (DataBaseEntity)
-typealias UserModelMapper<DataBaseEntity: Object, Entity> = (DataBaseEntity) -> (Entity)
+typealias DataBaseToModelMapper<DataBaseEntity: Object, Entity> = (DataBaseEntity) -> (Entity)
 
 struct ModernMapper {
     let realm: Realm = {
@@ -32,7 +32,7 @@ struct ModernMapper {
         }
     }
     
-    func getUser<DataBase: Object, Model>(at id: String, mapper: UserModelMapper<DataBase, Model>) -> User? {
+    func getUser<DataBase: Object, Model>(at id: String, mapper: DataBaseToModelMapper<DataBase, Model>) -> User? {
         guard let dataBaseUser = realm.objects(DataBaseUser.self).first(where: { user in
             user.id == id
         }) else { return nil }
