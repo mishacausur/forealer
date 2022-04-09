@@ -1,5 +1,5 @@
 //
-//  Mappers.swift
+//  ModernMappers.swift
 //  forealer
 //
 //  Created by Misha Causur on 10.04.2022.
@@ -7,8 +7,10 @@
 
 import RealmSwift
 
-struct Mapper {
+typealias DataBaseModelMapper<DataBaseEntity: Object, Entity> = (Entity) -> (DataBaseEntity)
+typealias UserModelMapper<DataBaseEntity: Object, Entity> = (DataBaseEntity) -> (Entity)
 
+struct ModernMapper {
     let realm: Realm = {
         do {
             let realm = try Realm()
@@ -18,23 +20,22 @@ struct Mapper {
             fatalError()
         }
     }()
-
-    func createUser<T: ModelMapper>(user: UserModel, mapper: T) {
+    
+    func createUser<DataBase: Object, Model>(user: User, mapper: DataBaseModelMapper<DataBase, Model>) {
         do {
             try realm.write {
-                let dataBaseUser = mapper.map(user as! T.Model)
+                let dataBaseUser = mapper(user as! Model)
                 realm.add(dataBaseUser, update: .all)
             }
         } catch(let error) {
             print(error.localizedDescription)
         }
     }
-
-    func getUser<T: PersistenceMapper>(at id: String, mapper: T) -> UserModel? {
+    
+    func getUser<DataBase: Object, Model>(at id: String, mapper: UserModelMapper<DataBase, Model>) -> User? {
         guard let dataBaseUser = realm.objects(DataBaseUser.self).first(where: { user in
             user.id == id
         }) else { return nil }
-        return (mapper.map(dataBaseUser as! T.PersistenceModel) as! UserModel)
+        return (mapper(dataBaseUser as! DataBase) as! User)
     }
 }
-
