@@ -12,6 +12,13 @@
 		B6370A692802026A0061B728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A682802026A0061B728 /* ViewController.swift */; };
 		B6370A6E2802026D0061B728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6370A6D2802026D0061B728 /* Assets.xcassets */; };
 		B6370A712802026D0061B728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6370A6F2802026D0061B728 /* LaunchScreen.storyboard */; };
+		B6370A7A280204530061B728 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B6370A79280204530061B728 /* Realm */; };
+		B6370A7C280204530061B728 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6370A7B280204530061B728 /* RealmSwift */; };
+		B6370A80280204780061B728 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A7F280204780061B728 /* DataBaseManager.swift */; };
+		B6370A82280204950061B728 /* PersistenceMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A81280204950061B728 /* PersistenceMapperProtocol.swift */; };
+		B6370A84280205200061B728 /* ModelMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A83280205200061B728 /* ModelMapperProtocol.swift */; };
+		B6370A87280205E60061B728 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A86280205E60061B728 /* UserModel.swift */; };
+		B6370A89280205F90061B728 /* DataBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A88280205F90061B728 /* DataBaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,11 @@
 		B6370A6D2802026D0061B728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6370A702802026D0061B728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6370A722802026D0061B728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6370A7F280204780061B728 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		B6370A81280204950061B728 /* PersistenceMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceMapperProtocol.swift; sourceTree = "<group>"; };
+		B6370A83280205200061B728 /* ModelMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMapperProtocol.swift; sourceTree = "<group>"; };
+		B6370A86280205E60061B728 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B6370A88280205F90061B728 /* DataBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6370A7C280204530061B728 /* RealmSwift in Frameworks */,
+				B6370A7A280204530061B728 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +68,43 @@
 		B6370A632802026A0061B728 /* forealer */ = {
 			isa = PBXGroup;
 			children = (
+				B6370A7E280204690061B728 /* Managers */,
+				B6370A7D280204610061B728 /* Flows */,
 				B6370A642802026A0061B728 /* AppDelegate.swift */,
 				B6370A662802026A0061B728 /* SceneDelegate.swift */,
-				B6370A682802026A0061B728 /* ViewController.swift */,
 				B6370A6D2802026D0061B728 /* Assets.xcassets */,
 				B6370A6F2802026D0061B728 /* LaunchScreen.storyboard */,
 				B6370A722802026D0061B728 /* Info.plist */,
 			);
 			path = forealer;
+			sourceTree = "<group>";
+		};
+		B6370A7D280204610061B728 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				B6370A682802026A0061B728 /* ViewController.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		B6370A7E280204690061B728 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B6370A7F280204780061B728 /* DataBaseManager.swift */,
+				B6370A86280205E60061B728 /* UserModel.swift */,
+				B6370A88280205F90061B728 /* DataBaseModel.swift */,
+				B6370A852802057F0061B728 /* Protocols */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B6370A852802057F0061B728 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B6370A81280204950061B728 /* PersistenceMapperProtocol.swift */,
+				B6370A83280205200061B728 /* ModelMapperProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +123,10 @@
 			dependencies = (
 			);
 			name = forealer;
+			packageProductDependencies = (
+				B6370A79280204530061B728 /* Realm */,
+				B6370A7B280204530061B728 /* RealmSwift */,
+			);
 			productName = forealer;
 			productReference = B6370A612802026A0061B728 /* forealer.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +155,9 @@
 				Base,
 			);
 			mainGroup = B6370A582802026A0061B728;
+			packageReferences = (
+				B6370A78280204530061B728 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = B6370A622802026A0061B728 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6370A80280204780061B728 /* DataBaseManager.swift in Sources */,
+				B6370A87280205E60061B728 /* UserModel.swift in Sources */,
+				B6370A82280204950061B728 /* PersistenceMapperProtocol.swift in Sources */,
 				B6370A692802026A0061B728 /* ViewController.swift in Sources */,
+				B6370A89280205F90061B728 /* DataBaseModel.swift in Sources */,
 				B6370A652802026A0061B728 /* AppDelegate.swift in Sources */,
+				B6370A84280205200061B728 /* ModelMapperProtocol.swift in Sources */,
 				B6370A672802026A0061B728 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +335,6 @@
 				INFOPLIST_FILE = forealer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -308,7 +362,6 @@
 				INFOPLIST_FILE = forealer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,6 +399,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6370A78280204530061B728 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6370A79280204530061B728 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6370A78280204530061B728 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		B6370A7B280204530061B728 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6370A78280204530061B728 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6370A592802026A0061B728 /* Project object */;
 }
