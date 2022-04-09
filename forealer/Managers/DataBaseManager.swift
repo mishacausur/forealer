@@ -7,3 +7,12 @@
 
 import Foundation
 
+struct DataBaseManager: ModelMapper {
+    
+    func map(_ model: UserModel) -> DataBaseUser {
+        let user = DataBaseUser()
+        user.id = model.id
+        user.name = model.name
+        return user
+    }
+}
