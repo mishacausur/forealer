@@ -19,6 +19,8 @@
 		B6370A84280205200061B728 /* ModelMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A83280205200061B728 /* ModelMapperProtocol.swift */; };
 		B6370A87280205E60061B728 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A86280205E60061B728 /* UserModel.swift */; };
 		B6370A89280205F90061B728 /* DataBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A88280205F90061B728 /* DataBaseModel.swift */; };
+		B6370A8C2802153F0061B728 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8B2802153F0061B728 /* ModelManager.swift */; };
+		B6370A8E280215C40061B728 /* Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8D280215C40061B728 /* Mappers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		B6370A83280205200061B728 /* ModelMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMapperProtocol.swift; sourceTree = "<group>"; };
 		B6370A86280205E60061B728 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B6370A88280205F90061B728 /* DataBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseModel.swift; sourceTree = "<group>"; };
+		B6370A8B2802153F0061B728 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		B6370A8D280215C40061B728 /* Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				B6370A7F280204780061B728 /* DataBaseManager.swift */,
+				B6370A8B2802153F0061B728 /* ModelManager.swift */,
 				B6370A8A280206780061B728 /* Models */,
 				B6370A852802057F0061B728 /* Protocols */,
+				B6370A8D280215C40061B728 /* Mappers.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -192,11 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6370A8E280215C40061B728 /* Mappers.swift in Sources */,
 				B6370A80280204780061B728 /* DataBaseManager.swift in Sources */,
 				B6370A87280205E60061B728 /* UserModel.swift in Sources */,
 				B6370A82280204950061B728 /* PersistenceMapperProtocol.swift in Sources */,
 				B6370A692802026A0061B728 /* ViewController.swift in Sources */,
 				B6370A89280205F90061B728 /* DataBaseModel.swift in Sources */,
+				B6370A8C2802153F0061B728 /* ModelManager.swift in Sources */,
 				B6370A652802026A0061B728 /* AppDelegate.swift in Sources */,
 				B6370A84280205200061B728 /* ModelMapperProtocol.swift in Sources */,
 				B6370A672802026A0061B728 /* SceneDelegate.swift in Sources */,
