@@ -23,6 +23,7 @@
 		B6370A8E280215C40061B728 /* Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8D280215C40061B728 /* Mappers.swift */; };
 		B6370A9028021AF90061B728 /* ModernMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8F28021AF90061B728 /* ModernMappers.swift */; };
 		B6370A9328021E540061B728 /* ADataBaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */; };
+		B6389E512804A7190078378B /* ADataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6389E502804A7190078378B /* ADataBaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B6370A8D280215C40061B728 /* Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappers.swift; sourceTree = "<group>"; };
 		B6370A8F28021AF90061B728 /* ModernMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernMappers.swift; sourceTree = "<group>"; };
 		B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADataBaseManagerProtocol.swift; sourceTree = "<group>"; };
+		B6389E502804A7190078378B /* ADataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADataBaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */,
+				B6389E502804A7190078378B /* ADataBaseManager.swift */,
 			);
 			path = AManagers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6370A9328021E540061B728 /* ADataBaseManagerProtocol.swift in Sources */,
+				B6389E512804A7190078378B /* ADataBaseManager.swift in Sources */,
 				B6370A8E280215C40061B728 /* Mappers.swift in Sources */,
 				B6370A80280204780061B728 /* DataBaseManager.swift in Sources */,
 				B6370A87280205E60061B728 /* UserModel.swift in Sources */,
