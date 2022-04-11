@@ -39,10 +39,16 @@ final class ADataBaseManager: ADataBaseManagerProtocol {
     
     func realm<S: Scheduler>(scheduler: S) -> AnyPublisher<Realm, Error> {
         return Just((configuration, nil))
+            .receive(on: scheduler)
+            .tryMap(Realm.init)
+            .eraseToAnyPublisher()
     }
     
     func getData<DataBase: Object, Entity>(mapper: @escaping DataBaseToModelMapper<DataBase, Entity>, block: @escaping RealmBlock<DataBase>) -> AnyPublisher<Entity?, Error> {
-        
+        return realm(scheduler: regularScheduler)
+            .map { $0.objects(DataBase.self) }
+            .map { block($0).last.map(mapper) }
+            .eraseToAnyPublisher()
     }
     
     func listen<DataBase: Object, Entity>(mapper: @escaping DataBaseToModelMapper<DataBase, Entity>, block: @escaping RealmBlock<DataBase>) -> AnyPublisher<Entity, Error> {
