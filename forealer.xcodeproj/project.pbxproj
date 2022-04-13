@@ -24,6 +24,8 @@
 		B6370A9028021AF90061B728 /* ModernMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A8F28021AF90061B728 /* ModernMappers.swift */; };
 		B6370A9328021E540061B728 /* ADataBaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */; };
 		B6389E512804A7190078378B /* ADataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6389E502804A7190078378B /* ADataBaseManager.swift */; };
+		B6389E5328056D690078378B /* AnySchedulerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6389E5228056D690078378B /* AnySchedulerHelper.swift */; };
+		B6A2D9DA280747E000967940 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2D9D9280747E000967940 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		B6370A8F28021AF90061B728 /* ModernMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernMappers.swift; sourceTree = "<group>"; };
 		B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADataBaseManagerProtocol.swift; sourceTree = "<group>"; };
 		B6389E502804A7190078378B /* ADataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADataBaseManager.swift; sourceTree = "<group>"; };
+		B6389E5228056D690078378B /* AnySchedulerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySchedulerHelper.swift; sourceTree = "<group>"; };
+		B6A2D9D9280747E000967940 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B6370A7F280204780061B728 /* DataBaseManager.swift */,
+				B6A2D9D9280747E000967940 /* NetworkManager.swift */,
 				B6370A8B2802153F0061B728 /* ModelManager.swift */,
 				B6370A8A280206780061B728 /* Models */,
 				B6370A852802057F0061B728 /* Protocols */,
@@ -134,6 +139,7 @@
 			children = (
 				B6370A9228021E540061B728 /* ADataBaseManagerProtocol.swift */,
 				B6389E502804A7190078378B /* ADataBaseManager.swift */,
+				B6389E5228056D690078378B /* AnySchedulerHelper.swift */,
 			);
 			path = AManagers;
 			sourceTree = "<group>";
@@ -221,11 +227,13 @@
 				B6370A80280204780061B728 /* DataBaseManager.swift in Sources */,
 				B6370A87280205E60061B728 /* UserModel.swift in Sources */,
 				B6370A82280204950061B728 /* PersistenceMapperProtocol.swift in Sources */,
+				B6389E5328056D690078378B /* AnySchedulerHelper.swift in Sources */,
 				B6370A692802026A0061B728 /* ViewController.swift in Sources */,
 				B6370A9028021AF90061B728 /* ModernMappers.swift in Sources */,
 				B6370A89280205F90061B728 /* DataBaseModel.swift in Sources */,
 				B6370A8C2802153F0061B728 /* ModelManager.swift in Sources */,
 				B6370A652802026A0061B728 /* AppDelegate.swift in Sources */,
+				B6A2D9DA280747E000967940 /* NetworkManager.swift in Sources */,
 				B6370A84280205200061B728 /* ModelMapperProtocol.swift in Sources */,
 				B6370A672802026A0061B728 /* SceneDelegate.swift in Sources */,
 			);
