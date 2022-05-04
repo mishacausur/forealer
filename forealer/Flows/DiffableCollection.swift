@@ -12,11 +12,21 @@ typealias Datasource = UICollectionViewDiffableDataSource<Section, Item>
 typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
 
 
-final class DiffableCollection: UIView {
+final class PhotosViewController: UIViewController {
+    
+    enum Mode: Int {
+        case monthSummary
+        case allPhotos
+    }
+    
+    private var datasource: Datasource!
     
     private let collectionView = UICollectionView()
     
     private var mode = Mode.allPhotos
+    
+    private let photos1 = Photo.demoPhotos.prefix(4)
+    private let photos2 = Photo.demoPhotos.suffix(4)
     
     private func layoutSection(forIndex index: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let photoHeight: NSCollectionLayoutDimension
@@ -65,6 +75,24 @@ final class DiffableCollection: UIView {
         }
     }
     
+    func snapshot() -> Snapshot {
+        var snapshot = Snapshot()
+
+        let julyCollection = Section.collection(header: "July 2020")
+        let augustCollection = Section.collection(header: "August 2020")
+
+        snapshot.appendSections([julyCollection, augustCollection])
+
+        snapshot.appendItems([.largePhoto(photos1.first!)], toSection: julyCollection)
+        snapshot.appendItems([.largePhoto(photos2.first!)], toSection: augustCollection)
+
+        if mode == .allPhotos {
+            snapshot.appendItems(photos1.dropFirst().map { Item.photo($0) }, toSection: julyCollection)
+            snapshot.appendItems(photos2.dropFirst().map { Item.photo($0) }, toSection: augustCollection)
+        }
+
+        return snapshot
+    }
 }
 
 

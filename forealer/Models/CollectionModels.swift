@@ -35,7 +35,10 @@ extension Photo: Hashable {
     }
 }
 
-enum Mode: Int {
-    case monthSummary
-    case allPhotos
+extension Photo {
+    static var demoPhotos: [Photo] {
+        let names = (1...8).map({ "photo\($0)" })
+        
+        return names.map({ Photo(image: UIImage(named: $0)!) })
+    }
 }
