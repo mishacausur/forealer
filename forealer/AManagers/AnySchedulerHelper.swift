@@ -12,9 +12,17 @@ public struct AnyScheduler<SchedulerTimeType, SchedulerOptions>: Scheduler where
     
     public func schedule(options: SchedulerOptions?, _ action: @escaping () -> Void) { }
     
-    public func schedule(after date: SchedulerTimeType, interval: SchedulerTimeType.Stride, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Void) -> Cancellable { }
+    public func schedule(after date: SchedulerTimeType, interval: SchedulerTimeType.Stride, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Void) -> Cancellable { return Stormor() }
     
     public func schedule(after date: SchedulerTimeType, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Void) { }
     
     public var minimumTolerance: SchedulerTimeType.Stride
+}
+
+struct Stormor: Cancellable {
+    func cancel() {
+        print("cancelled")
+    }
+    
+    
 }

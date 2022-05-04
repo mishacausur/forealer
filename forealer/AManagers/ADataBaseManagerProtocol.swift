@@ -12,7 +12,7 @@ typealias RealmBlock<DataBaseEntity: Object> = () -> (DataBaseEntity)
 
 protocol ADataBaseManagerProtocol: AnyObject {
     
-    func getData<DataBase: Object, Entity>(mapper: @escaping DataBaseToModelMapper<DataBase, Entity>, block: @escaping RealmBlock<DataBase>) -> AnyPublisher<Entity?, Error>
+//    func getData<DataBase: Object, Entity>(mapper: @escaping DataBaseToModelMapper<DataBase, Entity>, block: @escaping RealmBlock<DataBase>) -> AnyPublisher<Entity?, Error>
     
     func listen<DataBase: Object, Entity>(mapper: @escaping DataBaseToModelMapper<DataBase, Entity>, block: @escaping RealmBlock<DataBase>) -> AnyPublisher<Entity, Error>
     
