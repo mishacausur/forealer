@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Section: Hashable {
     case collection(header: String)
@@ -18,7 +19,23 @@ enum Section: Hashable {
     }
 }
 
-enum Item {
-    case largePhoto
-    case smallPhoto
+enum Item: Hashable {
+    case largePhoto(Photo)
+    case smallPhoto(Photo)
+}
+
+struct Photo {
+    let id = UUID()
+    let image: UIImage
+}
+
+extension Photo: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+enum Mode: Int {
+    case monthSummary
+    case allPhotos
 }

@@ -29,6 +29,9 @@
 		B6C9CAB92822B6C4009947D0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B6C9CAB82822B6C4009947D0 /* Realm */; };
 		B6C9CABB2822B6C4009947D0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6C9CABA2822B6C4009947D0 /* RealmSwift */; };
 		B6C9CABE2822BADE009947D0 /* CollectionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CABD2822BADE009947D0 /* CollectionModels.swift */; };
+		B6C9CAC02822BC62009947D0 /* DiffableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CABF2822BC62009947D0 /* DiffableCollection.swift */; };
+		B6C9CAC22822C1FA009947D0 /* PhotoSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAC12822C1FA009947D0 /* PhotoSummaryCell.swift */; };
+		B6C9CAC62822C20C009947D0 /* SecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAC52822C20C009947D0 /* SecondCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,11 @@
 		B6389E5228056D690078378B /* AnySchedulerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySchedulerHelper.swift; sourceTree = "<group>"; };
 		B6A2D9D9280747E000967940 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B6C9CABD2822BADE009947D0 /* CollectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModels.swift; sourceTree = "<group>"; };
+		B6C9CABF2822BC62009947D0 /* DiffableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollection.swift; sourceTree = "<group>"; };
+		B6C9CAC12822C1FA009947D0 /* PhotoSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSummaryCell.swift; sourceTree = "<group>"; };
+		B6C9CAC32822C20C009947D0 /* forealer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "forealer-Bridging-Header.h"; sourceTree = "<group>"; };
+		B6C9CAC42822C20C009947D0 /* SecondCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondCell.h; sourceTree = "<group>"; };
+		B6C9CAC52822C20C009947D0 /* SecondCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,11 @@
 			isa = PBXGroup;
 			children = (
 				B6370A682802026A0061B728 /* ViewController.swift */,
+				B6C9CABF2822BC62009947D0 /* DiffableCollection.swift */,
+				B6C9CAC12822C1FA009947D0 /* PhotoSummaryCell.swift */,
+				B6C9CAC42822C20C009947D0 /* SecondCell.h */,
+				B6C9CAC52822C20C009947D0 /* SecondCell.m */,
+				B6C9CAC32822C20C009947D0 /* forealer-Bridging-Header.h */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -197,6 +210,7 @@
 				TargetAttributes = {
 					B6370A602802026A0061B728 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -242,8 +256,11 @@
 				B6370A9328021E540061B728 /* ADataBaseManagerProtocol.swift in Sources */,
 				B6C9CABE2822BADE009947D0 /* CollectionModels.swift in Sources */,
 				B6389E512804A7190078378B /* ADataBaseManager.swift in Sources */,
+				B6C9CAC22822C1FA009947D0 /* PhotoSummaryCell.swift in Sources */,
 				B6370A8E280215C40061B728 /* Mappers.swift in Sources */,
 				B6370A80280204780061B728 /* DataBaseManager.swift in Sources */,
+				B6C9CAC02822BC62009947D0 /* DiffableCollection.swift in Sources */,
+				B6C9CAC62822C20C009947D0 /* SecondCell.m in Sources */,
 				B6370A87280205E60061B728 /* UserModel.swift in Sources */,
 				B6370A82280204950061B728 /* PersistenceMapperProtocol.swift in Sources */,
 				B6389E5328056D690078378B /* AnySchedulerHelper.swift in Sources */,
@@ -391,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JKYU7W8LBP;
@@ -408,6 +426,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mishacausur.forealer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "forealer/Flows/forealer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -418,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JKYU7W8LBP;
@@ -435,6 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mishacausur.forealer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "forealer/Flows/forealer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
