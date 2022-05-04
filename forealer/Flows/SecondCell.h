@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SecondCell : UICollectionViewCell
-
+@property (nonatomic, strong) UIView *view;
 @end
 
 NS_ASSUME_NONNULL_END

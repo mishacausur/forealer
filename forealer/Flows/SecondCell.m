@@ -9,25 +9,30 @@
 
 @implementation SecondCell
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (id)init {
-    if (self = [super initWithTitle:LocStr(@"CONTAINER_LIST_TITLE") navBarHidden:NO]) {
-        m_paths = [ContainerList shared].paths;
-
-        [[NSNotificationCenter defaultCenter] addObserver:self
-            selector:@selector(onContainerListDidChange)
-            name:kSDKLauncherContainerListDidChange object:nil];
+- (instancetype)init {
+    if (self = [super init]) {
+        [self setupSubviews];
     }
-
     return self;
 }
 
-- (void)loadView {
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setupSubviews];
+    }
+    return self;
+}
+
+- (void)setupSubviews {
     self.view = [[UIView alloc] init];
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    self.view.backgroundColor = [UIColor colorWithRed:4/255.0 green:170/255.0 blue:166/255.0 alpha:1.0];
+    [self.contentView addSubview:self.view];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    self.view.frame = self.contentView.frame;
 }
 
 @end
